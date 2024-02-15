@@ -15,29 +15,30 @@ const Footer = () => {
       <Box
         sx={{
           width: "auto",
-          height: {xs:400,lg:250},
+          height: { xs: 400, lg: 250 },
           backgroundColor: "#2663A8",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          margin: 0,
         }}
       >
         <Box
           sx={{
             width: { xs: 400, lg: 1100 },
             display: "flex",
-            flexDirection: {lg: "row" },
-            flexWrap:{xs:'wrap'},
-            alignItems:{xs:'center'},
-            justifyContent: {xs:'center', lg: "space-between" },
+            flexDirection: { xs: "none", lg: "row" },
+            flexWrap: { xs: "wrap", lg: "nowrap" },
+            alignItems: { xs: "center", lg: "center" },
+            justifyContent: { xs: "center", lg: "space-between" },
           }}
         >
-          <Box sx={{width:{xs:200}}}>
+          {/* Company Logo */}
+          <Box sx={{ width: { xs: 200 } }}>
             <img src={logo} alt="Logo" height={120} />
           </Box>
-          <Box sx={{width:{xs:200}}}>
+          {/* Company Address */}
+          <Box sx={{ width: { xs: 200 } }}>
             <TextComponent theme={"subheading"} color="#FFFFFF">
               Address
             </TextComponent>
@@ -47,11 +48,12 @@ const Footer = () => {
             <TextComponent>2094</TextComponent>
             <TextComponent>+27 69 963 7937</TextComponent>
           </Box>
-          <Box sx={{width:{xs:200},marginTop:{xs:4}}}>
+          {/* Links */}
+          <Box sx={{ width: { xs: 200 }, marginTop: { xs: 4, lg: 0 } }}>
             <TextComponent theme={"subheading"} color="#FFFFFF">
               Links
             </TextComponent>
-            <Link href="#" underline="hover" sx={{ marginTop: 20 }}>
+            <Link href="#" underline="hover" sx={{ marginTop: 4 }}>
               <TextComponent>Home</TextComponent>
             </Link>
             <Link href="#" underline="hover">
@@ -67,7 +69,8 @@ const Footer = () => {
               <TextComponent>Company Profile</TextComponent>
             </Link>
           </Box>
-          <Box sx={{width:{xs:200},marginTop:{xs:2}}}>
+          {/* Social Media */}
+          <Box sx={{ width: { xs: 200 }, marginTop: { xs: 2, lg: 0 } }}>
             <TextComponent theme={"subheading"} color="#FFFFFF">
               Follow Us
             </TextComponent>
