@@ -14,7 +14,7 @@ const HeroSection = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor:'#F2F2F2',
+        backgroundColor:'#EFF4F8',
       }}
     >
       <Box

@@ -1,18 +1,19 @@
 import { Box } from "@mui/material";
 import React from "react";
 import CustomTypography from "../CustomTypography";
-import Card from "../Card";
+// import Card from "../Card";
+import CustomCard from "../CustomCard";
 
 const Services = () => {
   return (
     <Box
       sx={{
         width: "auto",
-        height: 850,
+        height: 900,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor:"#2663A8"
+        backgroundColor: "#EFF4F8",
       }}
     >
       <Box
@@ -25,18 +26,21 @@ const Services = () => {
         }}
       >
         <Box>
-          <CustomTypography theme={"subheading"}>Services</CustomTypography>
+          <CustomTypography theme={"subheading"} color={"#509AD4"}>
+            Service
+          </CustomTypography>
         </Box>
         <Box
           sx={{
             display: "flex",
             flexWrap: "wrap",
-            marginTop: 4,
+            // marginTop: 2,
             alignItems: "center",
             justifyContent: "center",
           }}
         >
-          <Card />
+          {/* <Card /> */}
+          <CustomCard />
         </Box>
       </Box>
     </Box>

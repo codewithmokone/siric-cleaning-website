@@ -18,14 +18,15 @@ const CustomTextField = ({ placeholder, children, icon, multiline, rows }) => {
         marginTop: 2,
         marginBottom: 2,
         color: "#FFFFFF",
+        backgroundColor:'#FFFFFF'
       }}
       InputProps={{
         startAdornment: (
           <InputAdornment position="start">
-            {icon === "name" ? <PersonIcon /> : null}
-            {icon === "phone" ? <LocalPhoneIcon /> : null}
-            {icon === "email" ? <AlternateEmailIcon /> : null}
-            {icon === "message" ? <MailIcon /> : null}
+            {icon === "name" ? <PersonIcon sx={{color:"#509AD4"}} /> : null}
+            {icon === "phone" ? <LocalPhoneIcon sx={{color:"#509AD4"}} /> : null}
+            {icon === "email" ? <AlternateEmailIcon sx={{color:"#509AD4"}} /> : null}
+            {icon === "message" ? <MailIcon  sx={{color:"#509AD4"}}/> : null}
           </InputAdornment>
         ),
       }}

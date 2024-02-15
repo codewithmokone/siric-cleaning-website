@@ -20,7 +20,7 @@ const Navbar = () => {
     >
       <Box
         sx={{
-          width: 1200,
+          width: {xs:400, lg:1200},
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",

@@ -26,7 +26,7 @@ const CustomTypography = ({ children, theme,color,fontSize }) => {
         );
       } else {
         return (
-          <Typography sx={{ fontSize:{fontSize}, color:{color} }}>
+          <Typography variant="body2" sx={{ fontSize:{fontSize}, color:{color} }}>
             {children}
           </Typography>
         );

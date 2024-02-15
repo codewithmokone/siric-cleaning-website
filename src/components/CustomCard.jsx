@@ -1,5 +1,9 @@
-import { Box, Paper } from "@mui/material";
-import React, { useState } from "react";
+import React from "react";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import { CardActionArea } from "@mui/material";
 import image1 from "../assets/images/warehousecleaning.jpg";
 import commercial from "../assets/images/card-images/commercial.jpg";
 import healthcare from "../assets/images/card-images/healthcare.PNG";
@@ -11,83 +15,67 @@ import CustomTypography from "./CustomTypography";
 const cardInfo = [
   {
     image: industrial,
+    alt: "industrial image",
     heading: "Industrial Environment",
     info: "Ensuring the spotless upkeep of industrial environments to promote productivity and safety.",
   },
   {
     image: image1,
+    alt: "image1 image",
     heading: "Warehouse Environment",
     info: "Transforming storage spaces into organized and hygienic zones that optimize functionality.",
   },
   {
     image: office,
+    alt: "office image",
     heading: "Office Environment",
     info: "Elevating the work environment by maintaining pristine offices that inspire productivity and well-being.",
   },
   {
     image: commercial,
+    alt: "commercial image",
     heading: "Commercial Environment",
     info: "Partnering with businesses to enhance the appearance and hygiene of their public spaces.",
   },
   {
     image: healthcare,
+    alt: "healthcare image",
     heading: "Health Care Environment",
     info: "Safeguarding the health of patients, staff, and visitors through rigorous cleaning and sanitization practices.",
   },
   {
     image: domestic,
+    alt: "domestic image",
     heading: "Domestic Environment",
     info: "Elevating the Living space environment by maintaining pristine Houses that are welcoming and improve ones well-being.",
   },
 ];
 
-const Card = () => {
-  const [data, setData] = useState();
-
+const CustomCard = () => {
   return (
     <>
       {cardInfo.map((item, index) => (
-        <Paper
-          sx={{ width:260, height:335, borderBottomRadius: 2, margin: 4 }}
-          elevation={2}
-        >
-          <Box
-            sx={{
-              width:260,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <img
-              style={{
-                width:260,
-                height: 200,
-              }}
-              src={item.image}
-              alt="project_image"
+        <Card key={index} sx={{ maxWidth: 280, margin: 4, height: 335 }}>
+          <CardActionArea>
+            <CardMedia
+              component="img"
+              height="200"
+              image={item.image}
+              alt={item.alt}
             />
-          </Box>
-          <Box sx={{ margin: 1, display: "flex", justifyContent: "center" }}>
-            <CustomTypography theme={"subheading"}>
-              {item.heading}
-            </CustomTypography>
-          </Box>
-          <Box
-            sx={{
-              width: 250,
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-
-            }}
-          >
-            <CustomTypography fontSize={14} color={'#8F8888'}>{item.info}</CustomTypography>
-          </Box>
-        </Paper>
+            <CardContent>
+              <CustomTypography theme={'subheading'}>
+                {item.heading}
+              </CustomTypography>
+              <CustomTypography fontSize={14} color={'#8F8888'}>
+                {item.info}
+              </CustomTypography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
       ))}
     </>
   );
 };
 
-export default Card;
+export default CustomCard;

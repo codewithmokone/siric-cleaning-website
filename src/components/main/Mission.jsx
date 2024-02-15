@@ -12,7 +12,7 @@ const Mission = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor:'#F2F2F2'
+        backgroundColor: "#F2F2F2",
       }}
     >
       <Box
@@ -36,17 +36,22 @@ const Mission = () => {
             alignItems: "center",
           }}
         >
-          <CustomTypography theme={"subheading"} color={"#FFFFFF"}>
-            Our Mission
-          </CustomTypography>
-          <CustomTypography color={"#FFFFFF"} sx={{ marginTop: 4 }}>
-            Guided by our unwavering values of dedication, commitment, and
-            diligent effort, our mission is ambitious. Our aim is to create a
-            notable difference by establishing no less than 200 employment
-            opportunities for individuals seeking to enhance their livelihoods.
-            Through this endeavor, we aspire to foster social progress and
-            enhance the overall quality of life for the communities we touch.
-          </CustomTypography>
+          <Box>
+            <CustomTypography theme={"subheading"} color={"#509AD4"}>
+              Our Mission
+            </CustomTypography>
+          </Box>
+          <Box sx={{ marginTop: 2}}>
+            <CustomTypography color={"#FFFFFF"} >
+              Guided by our unwaveing values of dedication, commitment, and
+              diligent effort, our mission is ambitious. Our aim is to create a
+              notable difference by establishing no less than 200 employment
+              opportunities for individuals seeking to enhance their
+              livelihoods. Through this endeavor, we aspire to foster social
+              progress and enhance the overall quality of life for the
+              communities we touch.
+            </CustomTypography>
+          </Box>
         </Box>
       </Box>
     </Box>

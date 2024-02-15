@@ -6,6 +6,7 @@ import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import XIcon from "@mui/icons-material/X";
+import CustomTypography from "../CustomTypography";
 
 const Footer = () => {
   return (
@@ -14,34 +15,42 @@ const Footer = () => {
       <Box
         sx={{
           width: "auto",
-          height: 300,
+          height: {xs:400,lg:250},
           backgroundColor: "#2663A8",
           display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
           justifyContent: "center",
           margin: 0,
         }}
       >
         <Box
           sx={{
-            width: 1100,
+            width: { xs: 400, lg: 1100 },
             display: "flex",
-            justifyContent: "space-between",
-            marginTop: 4,
+            flexDirection: {lg: "row" },
+            flexWrap:{xs:'wrap'},
+            alignItems:{xs:'center'},
+            justifyContent: {xs:'center', lg: "space-between" },
           }}
         >
-          <Box>
+          <Box sx={{width:{xs:200}}}>
             <img src={logo} alt="Logo" height={120} />
           </Box>
-          <Box>
-            <TextComponent theme={"subheading"} color='#FFFFFF'>Address</TextComponent>
+          <Box sx={{width:{xs:200}}}>
+            <TextComponent theme={"subheading"} color="#FFFFFF">
+              Address
+            </TextComponent>
             <TextComponent>428 Roshland Lodge</TextComponent>
             <TextComponent>Cleveland</TextComponent>
             <TextComponent>Johannesburg</TextComponent>
             <TextComponent>2094</TextComponent>
             <TextComponent>+27 69 963 7937</TextComponent>
           </Box>
-          <Box>
-            <TextComponent theme={"subheading"} color='#FFFFFF'>Links</TextComponent>
+          <Box sx={{width:{xs:200},marginTop:{xs:4}}}>
+            <TextComponent theme={"subheading"} color="#FFFFFF">
+              Links
+            </TextComponent>
             <Link href="#" underline="hover" sx={{ marginTop: 20 }}>
               <TextComponent>Home</TextComponent>
             </Link>
@@ -58,8 +67,10 @@ const Footer = () => {
               <TextComponent>Company Profile</TextComponent>
             </Link>
           </Box>
-          <Box>
-            <TextComponent theme={"subheading"} color='#FFFFFF'>Follow Us</TextComponent>
+          <Box sx={{width:{xs:200},marginTop:{xs:2}}}>
+            <TextComponent theme={"subheading"} color="#FFFFFF">
+              Follow Us
+            </TextComponent>
             <Link href="#" sx={{ display: "flex", alignItems: "center" }}>
               <FacebookRoundedIcon
                 sx={{ color: "#FFFFFF", fontSize: 16, marginRight: 1 }}
@@ -83,6 +94,11 @@ const Footer = () => {
               <TextComponent>Linkedin</TextComponent>
             </Link>
           </Box>
+        </Box>
+        <Box sx={{ height: 20, marginTop: 6 }}>
+          <CustomTypography fontSize={14} color={"#FFFFFF"}>
+            Copyright &copy; 2024 - Siric | Website managed by Siric
+          </CustomTypography>
         </Box>
       </Box>
     </>
