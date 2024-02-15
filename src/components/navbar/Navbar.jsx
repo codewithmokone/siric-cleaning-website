@@ -2,11 +2,14 @@ import { Box, Link } from "@mui/material";
 import React from "react";
 import logo from "../../asserts/images/Siric_logo.png";
 import TextComponent from "../TextComponent";
-import ButtonComponent from "../ButtonComponent";
+import CustomButton from "../CustomButton";
+import CustomTypography from "../CustomTypography";
 
 const Navbar = () => {
   return (
-    <Box
+    <>
+     <Box sx={{ width: "auto", height: 2, backgroundColor: "#509AD4" }}></Box>
+     <Box
       sx={{
         width: "auto",
         height: 60,
@@ -34,23 +37,26 @@ const Navbar = () => {
               justifyContent:'center',
             }}
           >
-            <Link href="#" underline="hover" sx={{marginLeft: 2, marginRight: 1,}}>
-              <TextComponent theme={'link' }>HOME</TextComponent>
+            <Link href="#" underline="hover" sx={{marginLeft: 4, marginRight: 2,}}>
+              {/* <TextComponent theme={'link' }>HOME</TextComponent> */}
+              <CustomTypography theme={'link'}>HOME</CustomTypography>
             </Link>
-            <Link href="#" underline="hover" sx={{marginLeft: 1, marginRight: 1,}}>
-              <TextComponent theme={'link'}>ABOUT</TextComponent>
+            <Link href="#" underline="hover" sx={{marginLeft: 2, marginRight: 2,}}>
+              <CustomTypography theme={'link'}>ABOUT</CustomTypography>
             </Link>
-            <Link href="#" underline="hover" sx={{marginLeft: 1, marginRight: 1,}}>
-              <TextComponent theme={'link'}>SERVICE</TextComponent>
+            <Link href="#" underline="hover" sx={{marginLeft: 2, marginRight: 2,}}>
+              <CustomTypography theme={'link'}>SERVICE</CustomTypography>
             </Link>
-            <Link href="#" underline="hover" sx={{marginLeft: 1, marginRight: 1,}}>
-              <TextComponent theme={'link'}>MISSION</TextComponent>
+            <Link href="#" underline="hover" sx={{marginLeft: 2, marginRight: 2,}}>
+              <CustomTypography theme={'link'}>MISSION</CustomTypography>
             </Link>
-            <ButtonComponent theme={'link'}><TextComponent theme={'link'}>CONTACT</TextComponent></ButtonComponent>
+            <CustomButton theme={'link'}><CustomTypography theme={'link'}>CONTACT</CustomTypography></CustomButton>
           </nav>
         </Box>
       </Box>
     </Box>
+    </>
+    
   );
 };
 

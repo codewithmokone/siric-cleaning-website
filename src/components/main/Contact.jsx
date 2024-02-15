@@ -1,12 +1,8 @@
 import { Box } from "@mui/material";
 import React from "react";
 import TextComponent from "../TextComponent";
-import InputComponent from "../InputComponent";
-import ButtonComponent from "../ButtonComponent";
-import PersonIcon from "@mui/icons-material/Person";
-import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
-import MailIcon from "@mui/icons-material/Mail";
+import CustomTextField from "../CustomTextField";
+import CustomButton from "../CustomButton";
 
 const Contact = () => {
   return (
@@ -47,16 +43,17 @@ const Contact = () => {
           }}
         >
           <Box sx={{ width: 600, display: "column", alignItems: "center" }}>
-            <InputComponent placeholder="Name" icon={"name"}></InputComponent>
-            <InputComponent placeholder="Phone" icon={"phone"}></InputComponent>
-            <InputComponent placeholder="Email" icon={"email"}></InputComponent>
-            <InputComponent
+            <CustomTextField placeholder="Name" icon={"name"}></CustomTextField>
+            <CustomTextField placeholder="Phone" icon={"phone"}></CustomTextField>
+            <CustomTextField placeholder="Email" icon={"email"}></CustomTextField>
+            <CustomTextField
               multiline
               rows={4}
               placeholder="Message"
-              // icon={"message"}
-            ></InputComponent>
-            <ButtonComponent>Send</ButtonComponent>
+            ></CustomTextField>
+            <Box sx={{ width: 600, display: "flex", justifyContent:'center',alignItems: "center",marginTop:2 }}>
+              <CustomButton>Send</CustomButton>
+            </Box>
           </Box>
         </Box>
       </Box>
