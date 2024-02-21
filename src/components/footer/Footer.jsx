@@ -1,4 +1,4 @@
-import { Box, Link } from "@mui/material";
+import { Box, Grid, Link } from "@mui/material";
 import React from "react";
 import TextComponent from "../TextComponent";
 import logo from "../../asserts/images/full-logofulllogo.png";
@@ -11,11 +11,13 @@ import CustomTypography from "../CustomTypography";
 const Footer = () => {
   return (
     <>
-      <Box sx={{ width: "auto", height: 6, backgroundColor: "#509AD4" }}></Box>
+      <Box
+        sx={{ width: "auto", height: 6, backgroundColor: "#509AD4" }}
+      ></Box>
       <Box
         sx={{
           width: "auto",
-          height: { xs: 400, lg: 250 },
+          height: { xs: 600, lg: 250 },
           backgroundColor: "#2663A8",
           display: "flex",
           flexDirection: "column",
@@ -25,82 +27,122 @@ const Footer = () => {
       >
         <Box
           sx={{
-            width: { xs: 400, lg: 1100 },
+            width: { xs: 400, lg: 1200 },
             display: "flex",
-            flexDirection: { xs: "none", lg: "row" },
-            flexWrap: { xs: "wrap", lg: "nowrap" },
+            flexDirection: { lg: "row" },
+            flexWrap: { xs: "wrap"},
             alignItems: { xs: "center", lg: "center" },
             justifyContent: { xs: "center", lg: "space-between" },
           }}
         >
           {/* Company Logo */}
-          <Box sx={{ width: { xs: 200 } }}>
+          <Box sx={{ width: { xs: 180 }, marginLeft: 5 }}>
             <img src={logo} alt="Logo" height={120} />
           </Box>
           {/* Company Address */}
-          <Box sx={{ width: { xs: 200 } }}>
-            <TextComponent theme={"subheading"} color="#FFFFFF">
+          <Box sx={{ width: { xs: 180 } }}>
+            <CustomTypography theme={"subheading"} color="#FFFFFF">
               Address
-            </TextComponent>
-            <TextComponent>428 Roshland Lodge</TextComponent>
-            <TextComponent>Cleveland</TextComponent>
-            <TextComponent>Johannesburg</TextComponent>
-            <TextComponent>2094</TextComponent>
-            <TextComponent>+27 69 963 7937</TextComponent>
+            </CustomTypography>
+            <CustomTypography lineHeight={2} color={"#FFFFFF"}>
+              428 Roshland Lodge
+            </CustomTypography>
+            <CustomTypography lineHeight={2} color={"#FFFFFF"}>
+              Cleveland
+            </CustomTypography>
+            <CustomTypography lineHeight={2} color={"#FFFFFF"}>
+              Johannesburg
+            </CustomTypography>
+            <CustomTypography lineHeight={2} color={"#FFFFFF"}>
+              2094
+            </CustomTypography>
+            <CustomTypography lineHeight={2} color={"#FFFFFF"}>
+              +27 69 963 7937
+            </CustomTypography>
           </Box>
           {/* Links */}
-          <Box sx={{ width: { xs: 200 }, marginTop: { xs: 4, lg: 0 } }}>
-            <TextComponent theme={"subheading"} color="#FFFFFF">
+          <Box sx={{ width: { xs: 180 }, marginTop: { xs: 2, lg: 0 } }}>
+            <CustomTypography theme={"subheading"} color="#FFFFFF">
               Links
-            </TextComponent>
-            <Link href="#" underline="hover" sx={{ marginTop: 4 }}>
-              <TextComponent>Home</TextComponent>
+            </CustomTypography>
+            <Link href="#" underline="hover">
+              <CustomTypography theme={"link"} lineHeight={2}>
+                Home
+              </CustomTypography>
             </Link>
             <Link href="#" underline="hover">
-              <TextComponent>About</TextComponent>
+              <CustomTypography theme={"link"} lineHeight={2}>
+                About
+              </CustomTypography>
             </Link>
-            <Link href="#" underline="hover" sx={{ lineHeight: 1 }}>
-              <TextComponent>Service</TextComponent>
+            <Link href="#" underline="hover">
+              <CustomTypography theme={"link"} lineHeight={2}>
+                Service
+              </CustomTypography>
             </Link>
-            <Link href="#" underline="hover" sx={{ lineHeight: 1 }}>
-              <TextComponent>Mission</TextComponent>
+            <Link href="#" underline="hover">
+              <CustomTypography theme={"link"} lineHeight={2}>
+                Mission
+              </CustomTypography>
             </Link>
-            <Link href="#" underline="hover" sx={{ lineHeight: 1 }}>
-              <TextComponent>Company Profile</TextComponent>
+            <Link href="#" underline="hover">
+              <CustomTypography theme={"link"} lineHeight={2}>
+                Company Profile
+              </CustomTypography>
             </Link>
           </Box>
           {/* Social Media */}
-          <Box sx={{ width: { xs: 200 }, marginTop: { xs: 2, lg: 0 } }}>
-            <TextComponent theme={"subheading"} color="#FFFFFF">
+          <Box
+            sx={{
+              width: { xs:180 },
+              height: 170,
+              marginTop: { xs: 2, lg: 0 },
+              marginRight: -5,
+            }}
+          >
+            <CustomTypography theme={"subheading"} color="#FFFFFF">
               Follow Us
-            </TextComponent>
-            <Link href="#" sx={{ display: "flex", alignItems: "center" }}>
+            </CustomTypography>
+            <Link
+              href="#"
+              sx={{ display: "flex", alignItems: "center", marginTop: 0.5 }}
+            >
               <FacebookRoundedIcon
                 sx={{ color: "#FFFFFF", fontSize: 16, marginRight: 1 }}
               />
-              <TextComponent>Facebook</TextComponent>
+              <CustomTypography theme={"link"}>Facebook</CustomTypography>
             </Link>
-            <Link href="#" sx={{ display: "flex", alignItems: "center" }}>
+            <Link
+              href="#"
+              sx={{ display: "flex", alignItems: "center", marginTop: 1 }}
+            >
               <XIcon sx={{ color: "#FFFFFF", fontSize: 16, marginRight: 1 }} />
-              <TextComponent>Twitter</TextComponent>
+              <CustomTypography theme={"link"}>Twitter</CustomTypography>
             </Link>
-            <Link href="#" sx={{ display: "flex", alignItems: "center" }}>
+            <Link
+              href="#"
+              sx={{ display: "flex", alignItems: "center", marginTop: 1 }}
+            >
               <InstagramIcon
                 sx={{ color: "#FFFFFF", fontSize: 16, marginRight: 1 }}
               />
-              <TextComponent>Instagram</TextComponent>
+              <CustomTypography theme={"link"}>Instagram</CustomTypography>
             </Link>
-            <Link href="#" sx={{ display: "flex", alignItems: "center" }}>
+            <Link
+              href="#"
+              sx={{ display: "flex", alignItems: "center", marginTop: 1 }}
+            >
               <LinkedInIcon
                 sx={{ color: "#FFFFFF", fontSize: 16, marginRight: 1 }}
               />
-              <TextComponent>Linkedin</TextComponent>
+              <CustomTypography theme={"link"}>Linkedin</CustomTypography>
             </Link>
           </Box>
         </Box>
-        <Box sx={{ height: 20, marginTop: 6 }}>
+        <Box sx={{ height: 20, marginTop: 4,display:'flex',alignItems:'center',justifyContent:'center' }}>
           <CustomTypography fontSize={14} color={"#FFFFFF"}>
-            Copyright &copy; 2024 - Siric | Website managed by Siric
+            Copyright &copy; 2024 - Siric | Powered by Siric | Designed by Simon
+            Lephoto
           </CustomTypography>
         </Box>
       </Box>

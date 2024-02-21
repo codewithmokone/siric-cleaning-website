@@ -11,7 +11,7 @@ const HeroSection = () => {
       sx={{
         width: "auto",
         height:400,
-        display: "flex",
+        display: {lg:"flex"},
         justifyContent: "center",
         alignItems: "center",
         backgroundColor:'#EFF4F8',

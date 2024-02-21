@@ -1,3 +1,9 @@
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Switch,
+} from "react-router-dom";
 import Footer from "./components/footer/Footer";
 import HeroSection from "./components/herosection/HeroSection";
 import About from "./components/main/About";
@@ -18,6 +24,18 @@ function App() {
       <CustomizedSolutions />
       <Contact />
       <Footer />
+      {/* <Router>
+        <Switch>
+          <Route path="/" element={<Navbar />}>
+            <Route index element={<Navbar />} />
+            <Route path="about" element={<About />} />
+            <Route path="service" element={<Services />} />
+            <Route path="mission" element={<Mission />} />
+            <Route path="contact" element={<Contact />} />
+            {/* <Route path="*" element={<NoPage />} /> */}
+          {/* </Route>
+        </Switch>
+      </Router> */}
     </>
   );
 }

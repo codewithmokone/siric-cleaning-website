@@ -69,7 +69,7 @@ const Card = () => {
             />
           </Box>
           <Box sx={{ margin: 1, display: "flex", justifyContent: "center" }}>
-            <CustomTypography theme={"subheading"}>
+            <CustomTypography theme={"subheading"} color={'#509AD4'}>
               {item.heading}
             </CustomTypography>
           </Box>

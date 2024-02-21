@@ -41,13 +41,13 @@ const Navbar = () => {
               {/* <TextComponent theme={'link' }>HOME</TextComponent> */}
               <CustomTypography theme={'link'}>HOME</CustomTypography>
             </Link>
-            <Link href="#" underline="hover" sx={{marginLeft: 2, marginRight: 2,}}>
+            <Link href="#about" underline="hover" sx={{marginLeft: 2, marginRight: 2,}}>
               <CustomTypography theme={'link'}>ABOUT</CustomTypography>
             </Link>
-            <Link href="#" underline="hover" sx={{marginLeft: 2, marginRight: 2,}}>
+            <Link href="#service" underline="hover" sx={{marginLeft: 2, marginRight: 2,}}>
               <CustomTypography theme={'link'}>SERVICE</CustomTypography>
             </Link>
-            <Link href="#" underline="hover" sx={{marginLeft: 2, marginRight: 2,}}>
+            <Link href="#mission" underline="hover" sx={{marginLeft: 2, marginRight: 2,}}>
               <CustomTypography theme={'link'}>MISSION</CustomTypography>
             </Link>
             <CustomButton theme={'link'}><CustomTypography theme={'link'}>CONTACT</CustomTypography></CustomButton>

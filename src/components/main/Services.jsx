@@ -9,11 +9,11 @@ const Services = () => {
     <Box
       sx={{
         width: "auto",
-        height: 900,
+        height: 1000,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "#EFF4F8",
+        // backgroundColor: "#EFF4F8",
       }}
     >
       <Box
@@ -25,16 +25,42 @@ const Services = () => {
           justifyContent: "center",
         }}
       >
-        <Box>
-          <CustomTypography theme={"subheading"} color={"#509AD4"}>
-            Service
+        <Box
+          sx={{
+            width: 320,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <CustomTypography textAlig={"center"} color={"gray"}>
+            Our Best Service
           </CustomTypography>
         </Box>
         <Box
           sx={{
+            width: 320,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            marginTop: 2,
+          }}
+        >
+          <CustomTypography
+            textAlig={"center"}
+            theme={"subheading"}
+            color={"#509AD4"}
+            textAlign={'center'}
+          >
+            We Are Offering The Best Cleaning Service For You
+          </CustomTypography>
+        </Box>
+        <Box
+          sx={{
+            // width:{xs:400},
             display: "flex",
             flexWrap: "wrap",
-            // marginTop: 2,
+            marginTop: 2,
             alignItems: "center",
             justifyContent: "center",
           }}

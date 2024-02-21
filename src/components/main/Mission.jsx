@@ -17,7 +17,7 @@ const Mission = () => {
     >
       <Box
         sx={{
-          width: 1200,
+          width: {xs:'auto',lg:1200},
           height: 450,
           display: "flex",
           justifyContent: "center",
@@ -29,7 +29,7 @@ const Mission = () => {
       >
         <Box
           sx={{
-            width: 450,
+            width: {xs:'auto',lg:450},
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",

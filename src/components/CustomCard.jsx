@@ -55,19 +55,34 @@ const CustomCard = () => {
   return (
     <>
       {cardInfo.map((item, index) => (
-        <Card key={index} sx={{ maxWidth: 280, margin: 4, height: 335 }}>
-          <CardActionArea>
+        <Card
+          key={index}
+          sx={{
+            maxWidth: { xs: 180, lg: 280 },
+            margin: {xs:2,lg:4},
+            height: { xs: 150, lg: 335 },
+          }}
+        >
+          <CardActionArea
+            sx={{ display: "flex", flexDirection: { xs: "column", lg: "column" } }}
+          >
             <CardMedia
+              sx={{ width: { lg: 280 }, height: { xs: 200, lg: 200 } }}
               component="img"
-              height="200"
+              // height="200"
+              // height="auto"
               image={item.image}
               alt={item.alt}
             />
-            <CardContent>
-              <CustomTypography theme={'subheading'}>
+            <CardContent sx={{marginTop:{xs:-8,lg:0}}}>
+              <CustomTypography
+                theme={"subheading"}
+                color={"#509AD4"}
+                textAlign={"center"}
+              >
                 {item.heading}
               </CustomTypography>
-              <CustomTypography fontSize={14} color={'#8F8888'}>
+              <CustomTypography fontSize={14} color={"#8F8888"} sx={{marginTop:4}}>
                 {item.info}
               </CustomTypography>
             </CardContent>
