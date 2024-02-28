@@ -25,7 +25,7 @@ const CustomizedSolutions = () => {
         <Box sx={{ width: {xs:450,lg: 400} }}>
           <img src={image} alt="main-image" width={300} height={300} />
         </Box>
-        <Box sx={{ width: 360,marginLeft:-55 }}>
+        <Box sx={{ width: 360,marginLeft:{xs: -55,lg:0} }}>
           <Box>
             <CustomTypography theme={"subheading"} color={"#509AD4"}>
               Customized Solutions

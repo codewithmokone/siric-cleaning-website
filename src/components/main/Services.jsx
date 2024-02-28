@@ -9,12 +9,13 @@ const Services = () => {
     <Box
       sx={{
         width: "auto",
-        height: 1000,
+        height: {xs:800,lg:1000},
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         // backgroundColor: "#EFF4F8",
       }}
+      id="service"
     >
       <Box
         sx={{

@@ -8,7 +8,7 @@ const About = () => {
     <Box
       sx={{
         width: "auto",
-        height: 500,
+        height:{xs:350,lg: 500},
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -23,7 +23,7 @@ const About = () => {
           justifyContent: "center",
         }}
       >
-        <Box sx={{ width: 360, marginRight: 10 }}>
+        <Box sx={{ width: 360,  }}>
           <Box
             sx={{ display: "flex", justifyContent: "center", marginBottom: 2 }}
           >
@@ -42,7 +42,7 @@ const About = () => {
           </CustomTypography>
           </Box>
         </Box>
-        <Box sx={{ width: 400, marginLeft: { xs: -40, lg: 12 } }}>
+        <Box sx={{display:{xs:'none',lg:'flex'}, width: 400, marginLeft: { xs: -40, lg: 12 } }}>
           <img src={image} alt="main-image" width={300} height={300} />
         </Box>
       </Box>

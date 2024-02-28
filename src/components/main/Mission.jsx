@@ -14,6 +14,7 @@ const Mission = () => {
         justifyContent: "center",
         backgroundColor: "#F2F2F2",
       }}
+      id="mission"
     >
       <Box
         sx={{

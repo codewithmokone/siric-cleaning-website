@@ -47,6 +47,7 @@ const Contact = () => {
         justifyContent: "center",
         margin: 0,
       }}
+      id="contact"
     >
       {submitted ? (
         <Box>

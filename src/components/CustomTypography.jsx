@@ -12,6 +12,12 @@ const CustomTypography = ({ children, theme, color, fontSize, textAlign,lineHeig
         {children}
       </Typography>
     );
+  } else if (theme === "menuLink") {
+    return (
+      <Typography sx={{ fontSize: 14, fontWeight: 500, color: "#2663A8",lineHeight:{lineHeight} }}>
+      {children}
+    </Typography>
+    );
   } else if (theme === "heading") {
     return (
       <Typography sx={{ fontSize: 24, fontWeight: 700, color: { color } }}>
@@ -25,7 +31,7 @@ const CustomTypography = ({ children, theme, color, fontSize, textAlign,lineHeig
         component={'h3'}
         sx={{
           fontSize: {fontSize},
-          fontWeight: 500,
+          fontWeight: 600,
           color: { color },
           textAlign: { textAlign },
         }}
