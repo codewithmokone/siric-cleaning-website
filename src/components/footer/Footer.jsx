@@ -17,7 +17,7 @@ const Footer = () => {
       <Box
         sx={{
           width: "auto",
-          height: { xs: 600, lg: 250 },
+          height: { xs: 500, lg: 250 },
           backgroundColor: "#2663A8",
           display: "flex",
           flexDirection: "column",
@@ -70,17 +70,17 @@ const Footer = () => {
                 Home
               </CustomTypography>
             </Link>
-            <Link href="#" underline="hover">
+            <Link href="#about" underline="hover">
               <CustomTypography theme={"link"} lineHeight={2}>
                 About
               </CustomTypography>
             </Link>
-            <Link href="#" underline="hover">
+            <Link href="#service" underline="hover">
               <CustomTypography theme={"link"} lineHeight={2}>
                 Service
               </CustomTypography>
             </Link>
-            <Link href="#" underline="hover">
+            <Link href="#mission" underline="hover">
               <CustomTypography theme={"link"} lineHeight={2}>
                 Mission
               </CustomTypography>
@@ -140,8 +140,8 @@ const Footer = () => {
           </Box>
         </Box>
         <Box sx={{ height: 20, marginTop: 4,display:'flex',alignItems:'center',justifyContent:'center' }}>
-          <CustomTypography fontSize={14} color={"#FFFFFF"}>
-            Copyright &copy; 2024 - Siric | Powered by Siric | Designed by Simon
+          <CustomTypography  fontSize={14} color={"#FFFFFF"}>
+            Copyright &copy; 2024 - Siric | Designed by Simon
             Lephoto
           </CustomTypography>
         </Box>

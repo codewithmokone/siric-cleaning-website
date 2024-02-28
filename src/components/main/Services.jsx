@@ -13,7 +13,7 @@ const Services = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        // backgroundColor: "#EFF4F8",
+        backgroundColor: "#EFF4F8",
       }}
       id="service"
     >
@@ -58,7 +58,7 @@ const Services = () => {
         </Box>
         <Box
           sx={{
-            width:{xs:390},
+            width:{xs:390,lg:1200},
             display: "flex",
             flexWrap: "wrap",
             marginTop: 2,
