@@ -58,7 +58,7 @@ const CustomCard = () => {
         <Card
           key={index}
           sx={{
-            maxWidth: { xs: 180, lg: 280 },
+            maxWidth: { xs: 160, lg: 280 },
             margin: {xs:2,lg:4},
             height: { xs: 150, lg: 335 },
           }}

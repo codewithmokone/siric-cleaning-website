@@ -57,13 +57,13 @@ const Contact = () => {
       ) : (
         <Box
           sx={{
-            width: {xs:400, lg:1200},
+            width: {xs:390, lg:1200},
             display: "column",
             justifyContent: "center",
             marginTop: 6,
           }}
         >
-          <Box sx={{ width: {xs:400, lg:1200}, display: "flex", justifyContent: "center" }}>
+          <Box sx={{ width: {xs:390, lg:1200}, display: "flex", justifyContent: "center" }}>
             <CustomTypography
               color="#509AD4"
               theme={"subheading"}
@@ -74,13 +74,13 @@ const Contact = () => {
           </Box>
           <Box
             sx={{
-              width: {xs:400, lg:1200},
+              width: {xs:390, lg:1200},
               display: "flex",
               justifyContent: "center",
               marginTop: 4,
             }}
           >
-            <Box sx={{ width:{xs:400, lg:600}, display: "column", alignItems: "center" }}>
+            <Box sx={{ width:{xs:360, lg:600}, display: "column", alignItems: "center" }}>
               <CustomTextField
                 placeholder="Name"
                 icon={"name"}
@@ -100,7 +100,7 @@ const Contact = () => {
               ></CustomTextField>
               <Box
                 sx={{
-                  width:{xs:400, lg:600},
+                  width:{xs:360, lg:600},
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",

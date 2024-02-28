@@ -19,8 +19,8 @@ const HeroSection = () => {
     >
       <Box
         sx={{
-          width: 400,
-          display: "flex",
+          width: 390,
+          display: {xs:"none",lg:"flex"},
           flexDirection: "column",
           alignItems: "center",
           marginBottom:-8

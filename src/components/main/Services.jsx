@@ -19,7 +19,7 @@ const Services = () => {
     >
       <Box
         sx={{
-          width: 1200,
+          width: {xs:390,lg:1200},
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -58,7 +58,7 @@ const Services = () => {
         </Box>
         <Box
           sx={{
-            // width:{xs:400},
+            width:{xs:390},
             display: "flex",
             flexWrap: "wrap",
             marginTop: 2,

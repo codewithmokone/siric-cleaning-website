@@ -30,7 +30,7 @@ const Mission = () => {
       >
         <Box
           sx={{
-            width: {xs:'auto',lg:450},
+            width: {xs:"auto",lg:450},
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
@@ -42,7 +42,7 @@ const Mission = () => {
               Our Mission
             </CustomTypography>
           </Box>
-          <Box sx={{ marginTop: 2}}>
+          <Box sx={{ marginTop: 2, }}>
             <CustomTypography color={"#FFFFFF"} >
               Guided by our unwaveing values of dedication, commitment, and
               diligent effort, our mission is ambitious. Our aim is to create a

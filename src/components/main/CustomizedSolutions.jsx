@@ -22,17 +22,17 @@ const CustomizedSolutions = () => {
           alignItems: "center",
         }}
       >
-        <Box sx={{ width: {xs:450,lg: 400} }}>
+        <Box sx={{ width: {xs:360,lg: 400} }}>
           <img src={image} alt="main-image" width={300} height={300} />
         </Box>
-        <Box sx={{ width: 360,marginLeft:{xs: -55,lg:0} }}>
+        <Box sx={{ width: 360,marginLeft:{xs: -45,lg:0} }}>
           <Box>
             <CustomTypography theme={"subheading"} color={"#509AD4"}>
               Customized Solutions
             </CustomTypography>
           </Box>
           <Box sx={{ marginTop: 2 }}>
-            <CustomTypography >
+            <CustomTypography color={'grey'}>
               We understand that each workplace is unique, with distinct needs
               and requirements. That's why we offer customized cleaning
               solutions tailored to the specific demands of your environment.
