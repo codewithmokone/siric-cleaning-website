@@ -30,6 +30,7 @@ const Navbar = () => {
       <Box sx={{ width: "auto", height: 6, backgroundColor: "#509AD4" }}></Box>
       <AppBar
         position="static"
+        elevation={10}
         sx={{ display: "flex", justifyContent: "center",bgcolor:'#2663A8' }}
       >
         <Toolbar  sx={{ display: "flex", justifyContent: "center" }}>

@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import React from "react";
-import image from "../../assets/images/hero-sec.png";
+import image from "../../assets/images/newherosection.svg";
 import logo from "../../assets/images/blue_logo.svg";
 import CustomTypography from "../CustomTypography";
 import CustomButton from "../CustomButton";
@@ -10,41 +10,46 @@ const HeroSection = () => {
     <Box
       sx={{
         width: "auto",
-        height:400,
-        display: {lg:"flex"},
+        height: 400,
+        display: { lg: "flex" },
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor:'#EFF4F8',
+        backgroundImage: `url(${image})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
       }}
     >
       <Box
         sx={{
-          width: 390,
-          display: {xs:"none",lg:"flex"},
+          display: { xs: "none", lg: "flex" },
           flexDirection: "column",
+          justifyContent: "center",
           alignItems: "center",
-          marginBottom:-8
         }}
       >
-        <img src={logo} alt="main-image" width={"60%"} />
-        <CustomTypography theme={"heading"} color={"#509AD4"}>
-          CLEANING SERVICES
+        {/* <img src={logo} alt="main-image" width={"60%"} /> */}
+        <CustomTypography theme={"heading"} color={"#FFFFFF"}>
+          Siric Cleaning Services and Projects Pty (Ltd)
         </CustomTypography>
-        <CustomTypography theme={"subheading"}>
-          AND PROJECTS PTY(LTD)
+        <CustomTypography theme={"subheading"} color={"#FFFFFF"}>
+        SOLUTIONS TAILERED TO YOUR SPECIFIC DEMANDS.
         </CustomTypography>
-        <CustomTypography fontSize={12} color={"#8F8888"}>
+        {/* <CustomTypography theme={"subheading"} color={"#FFFFFF"}>
+          HELPING YOU KEEP YOUR FUTURE CLEAN.
+        </CustomTypography> */}
+        {/* <CustomTypography fontSize={12} color={"#8F8888"}>
           HELPING YOU KEEP YOUR FUTURE CLEAN
-        </CustomTypography>
+        </CustomTypography> */}
         <Box sx={{ marginTop: 2 }}>
-          <CustomButton width={160} buttonColor={'#509AD4'} >
+          <CustomButton width={160} buttonColor={"#509AD4"}>
             Contact Us
           </CustomButton>
         </Box>
       </Box>
-      <Box sx={{ marginLeft: 20,marginBottom:-13 }}>
+      {/* <Box sx={{ marginLeft: 20, marginBottom: -13 }}>
         <img src={image} alt="main-image" width={"100%"} height={300} />
-      </Box>
+      </Box> */}
     </Box>
   );
 };

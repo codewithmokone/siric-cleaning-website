@@ -20,7 +20,7 @@ const CustomTypography = ({ children, theme, color, fontSize, textAlign,lineHeig
     );
   } else if (theme === "heading") {
     return (
-      <Typography sx={{ fontSize: 24, fontWeight: 700, color: { color } }}>
+      <Typography sx={{ fontSize: 30, fontWeight: 700, color: { color } }}>
         {children}
       </Typography>
     );

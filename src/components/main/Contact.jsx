@@ -57,13 +57,19 @@ const Contact = () => {
       ) : (
         <Box
           sx={{
-            width: {xs:390, lg:1200},
+            width: { xs: 390, lg: 1200 },
             display: "column",
             justifyContent: "center",
             marginTop: 6,
           }}
         >
-          <Box sx={{ width: {xs:390, lg:1200}, display: "flex", justifyContent: "center" }}>
+          <Box
+            sx={{
+              width: { xs: 390, lg: 1200 },
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
             <CustomTypography
               color="#509AD4"
               theme={"subheading"}
@@ -74,41 +80,49 @@ const Contact = () => {
           </Box>
           <Box
             sx={{
-              width: {xs:390, lg:1200},
+              width: { xs: 390, lg: 1200 },
               display: "flex",
               justifyContent: "center",
               marginTop: 4,
             }}
           >
-            <Box sx={{ width:{xs:360, lg:600}, display: "column", alignItems: "center" }}>
-              <CustomTextField
-                placeholder="Name"
-                icon={"name"}
-              ></CustomTextField>
-              <CustomTextField
-                placeholder="Phone"
-                icon={"phone"}
-              ></CustomTextField>
-              <CustomTextField
-                placeholder="Email"
-                icon={"email"}
-              ></CustomTextField>
-              <CustomTextField
-                multiline
-                rows={4}
-                placeholder="Message"
-              ></CustomTextField>
-              <Box
-                sx={{
-                  width:{xs:360, lg:600},
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  marginTop: 2,
-                }}
-              >
-                <CustomButton>Send</CustomButton>
-              </Box>
+            <Box
+              sx={{
+                width: { xs: 360, lg: 600 },
+                display: "column",
+                alignItems: "center",
+              }}
+            >
+              <form>
+                <CustomTextField
+                  placeholder="Name"
+                  icon={"name"}
+                ></CustomTextField>
+                <CustomTextField
+                  placeholder="Phone"
+                  icon={"phone"}
+                ></CustomTextField>
+                <CustomTextField
+                  placeholder="Email"
+                  icon={"email"}
+                ></CustomTextField>
+                <CustomTextField
+                  multiline
+                  rows={4}
+                  placeholder="Message"
+                ></CustomTextField>
+                <Box
+                  sx={{
+                    width: { xs: 360, lg: 600 },
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    marginTop: 2,
+                  }}
+                >
+                  <CustomButton>Send</CustomButton>
+                </Box>
+              </form>
             </Box>
           </Box>
         </Box>
