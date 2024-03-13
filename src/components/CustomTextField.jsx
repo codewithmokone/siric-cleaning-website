@@ -5,9 +5,11 @@ import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import MailIcon from "@mui/icons-material/Mail";
 
-const CustomTextField = ({ placeholder, children, icon, multiline, rows }) => {
+const CustomTextField = ({ placeholder, children, icon, multiline, rows,name }) => {
   return (
     <TextField
+      name={name}
+      required
       fullWidth
       size="small"
       placeholder={placeholder}

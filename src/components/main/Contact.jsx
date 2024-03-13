@@ -1,39 +1,37 @@
-import { Box } from "@mui/material";
-import React, { useState } from "react";
+import { Box, Button } from "@mui/material";
+import React, { useState, useRef } from "react";
 import CustomTextField from "../CustomTextField";
 import CustomButton from "../CustomButton";
 import CustomTypography from "../CustomTypography";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState(null);
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const form = useRef();
 
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+  // const [submitted, setSubmitted] = useState(false);
+
+  // Function for sending contact email using emailjs
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // prevents the page from reloading when you hit “Send”
+
+    emailjs
+      .sendForm(
+        'service_j4v7fi5',
+        'template_qno00vt',
+        form.current,
+        'UIEFYxSUvqD6lSTPa'
+      )
+      .then(
+        (result) => {
+          // show the user a success message
+          // setSubmitted(true)
         },
-        body: JSON.stringify({ name, email, message }),
-      });
-
-      if (!response.ok) {
-        throw new Error("Failed to submit form");
-      }
-
-      setName("");
-      setEmail("");
-      setMessage("");
-      setSubmitted(true);
-    } catch (error) {
-      setError("An error occurred while submitting the form");
-    }
+        (error) => {
+          // show the user an error
+        }
+      );
+      // setSubmitted(false)
   };
 
   return (
@@ -49,12 +47,12 @@ const Contact = () => {
       }}
       id="contact"
     >
-      {submitted ? (
+      {/* {submitted ? (
         <Box>
           <h2>Thank you for your message!</h2>
           <p>We will get back to you as soon as possible.</p>
         </Box>
-      ) : (
+      ) : ( */}
         <Box
           sx={{
             width: { xs: 390, lg: 1200 },
@@ -93,22 +91,26 @@ const Contact = () => {
                 alignItems: "center",
               }}
             >
-              <form>
+              <form ref={form} onSubmit={handleSubmit}>
                 <CustomTextField
+                  name="user_name"
                   placeholder="Name"
                   icon={"name"}
                 ></CustomTextField>
                 <CustomTextField
+                   name="user_phone"
                   placeholder="Phone"
                   icon={"phone"}
                 ></CustomTextField>
                 <CustomTextField
+                  name="user_email"
                   placeholder="Email"
                   icon={"email"}
                 ></CustomTextField>
                 <CustomTextField
                   multiline
                   rows={4}
+                  name="message"
                   placeholder="Message"
                 ></CustomTextField>
                 <Box
@@ -120,13 +122,13 @@ const Contact = () => {
                     marginTop: 2,
                   }}
                 >
-                  <CustomButton>Send</CustomButton>
+                  <CustomButton type="submit" value="Send">Send</CustomButton>
                 </Box>
               </form>
             </Box>
           </Box>
         </Box>
-      )}
+       {/* )} */}
     </Box>
   );
 };

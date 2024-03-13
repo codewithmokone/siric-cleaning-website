@@ -10,7 +10,7 @@ const HeroSection = () => {
     <Box
       sx={{
         width: "auto",
-        height: 400,
+        height: { xs: 200, lg: 400 },
         display: { lg: "flex" },
         justifyContent: "center",
         alignItems: "center",
@@ -33,7 +33,7 @@ const HeroSection = () => {
           Siric Cleaning Services and Projects Pty (Ltd)
         </CustomTypography>
         <CustomTypography theme={"subheading"} color={"#FFFFFF"}>
-        SOLUTIONS TAILERED TO YOUR SPECIFIC DEMANDS.
+          SOLUTIONS TAILERED TO YOUR SPECIFIC DEMANDS.
         </CustomTypography>
         {/* <CustomTypography theme={"subheading"} color={"#FFFFFF"}>
           HELPING YOU KEEP YOUR FUTURE CLEAN.
@@ -42,9 +42,11 @@ const HeroSection = () => {
           HELPING YOU KEEP YOUR FUTURE CLEAN
         </CustomTypography> */}
         <Box sx={{ marginTop: 2 }}>
-          <CustomButton width={160} buttonColor={"#509AD4"}>
-            Contact Us
-          </CustomButton>
+          <a href="#contact">
+            <CustomButton width={160} buttonColor={"#509AD4"}>
+              Contact Us
+            </CustomButton>
+          </a>
         </Box>
       </Box>
       {/* <Box sx={{ marginLeft: 20, marginBottom: -13 }}>

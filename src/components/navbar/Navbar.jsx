@@ -81,9 +81,11 @@ const Navbar = () => {
                 >
                   <CustomTypography theme={"link"}>MISSION</CustomTypography>
                 </Link>
+                <a href="#contact">
                 <CustomButton theme={"link"}>
                   <CustomTypography theme={"link"}>CONTACT</CustomTypography>
                 </CustomButton>
+                </a>
               </nav>
             </Box>
             {/* Menu icon for mobile view */}
