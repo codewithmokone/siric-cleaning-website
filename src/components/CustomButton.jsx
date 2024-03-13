@@ -3,7 +3,16 @@ import React from "react";
 
 const CustomButton = ({ children, theme, width, buttonColor, type, value }) => {
   if (theme === "link") {
-    return <Button sx={{ backgroundColor: "#509AD4" }}>{children}</Button>;
+    return (
+      <Button
+        sx={{
+          backgroundColor: "#509AD4",
+          ":hover": { backgroundColor: "#509AD4", borderRadius: 50 },
+        }}
+      >
+        {children}
+      </Button>
+    );
   } else {
     return (
       <Button
@@ -15,6 +24,10 @@ const CustomButton = ({ children, theme, width, buttonColor, type, value }) => {
           paddingLeft: 4,
           paddingRight: 4,
           width: { width },
+          ":hover": {
+            backgroundColor: "#509AD4",
+            borderRadius: 50,
+          },
         }}
       >
         {children}

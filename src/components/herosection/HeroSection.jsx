@@ -43,7 +43,7 @@ const HeroSection = () => {
         </CustomTypography> */}
         <Box sx={{ marginTop: 2 }}>
           <a href="#contact">
-            <CustomButton width={160} buttonColor={"#509AD4"}>
+            <CustomButton width={160}>
               Contact Us
             </CustomButton>
           </a>
