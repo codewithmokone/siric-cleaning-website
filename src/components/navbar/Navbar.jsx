@@ -13,7 +13,6 @@ import CustomButton from "../CustomButton";
 import CustomTypography from "../CustomTypography";
 import MenuIcon from "@mui/icons-material/Menu";
 
-
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
 
@@ -31,9 +30,9 @@ const Navbar = () => {
       <AppBar
         position="static"
         elevation={10}
-        sx={{ display: "flex", justifyContent: "center",bgcolor:'#2663A8' }}
+        sx={{ display: "flex", justifyContent: "center", bgcolor: "#2663A8" }}
       >
-        <Toolbar  sx={{ display: "flex", justifyContent: "center" }}>
+        <Toolbar sx={{ display: "flex", justifyContent: "center" }}>
           <Box
             sx={{
               width: { xs: 400, lg: 1200 },
@@ -81,11 +80,11 @@ const Navbar = () => {
                 >
                   <CustomTypography theme={"link"}>MISSION</CustomTypography>
                 </Link>
-                <a href="#contact">
-                <CustomButton theme={"link"}>
-                  <CustomTypography theme={"link"}>CONTACT</CustomTypography>
-                </CustomButton>
-                </a>
+                <Link href="#contact">
+                  <CustomButton theme={"link"}>
+                    <CustomTypography theme={"link"}>CONTACT</CustomTypography>
+                  </CustomButton>
+                </Link>
               </nav>
             </Box>
             {/* Menu icon for mobile view */}
